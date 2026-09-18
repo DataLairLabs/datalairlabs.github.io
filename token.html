@@ -87,21 +87,20 @@
             </div>
         </div>
     </footer>
-    <!-- ADD THIS SCRIPT BLOCK at the very bottom of your body -->
-  <script>
-    window.addEventListener('load', function() {
-      window.Jupiter.init({
-        displayMode: "integrated",
-        integratedTargetId: "integrated-terminal", // Matches the div ID above
-        endpoint: "https://api.mainnet-beta.solana.com", // Replace with your RPC URL
-        formProps: {
-          initialOutputMint: "4AwP3tzZjGHTmwm6q1RyrJPfKRUaWkUoLiCU4bcApump",
-          initialInputMint: "So11111111111111111111111111111111111111112",
-          fixedOutputMint: true
-        }
-      });
+<script>
+  window.addEventListener('load', function() {
+    window.Jupiter.init({
+      displayMode: "integrated",
+      integratedTargetId: "integrated-terminal",
+      // REMOVED 'endpoint' line so Jupiter uses its default RPCs
+      formProps: {
+        initialOutputMint: "4AwP3tzZjGHTmwm6q1RyrJPfKRUaWkUoLiCU4bcApump",
+        initialInputMint: "So11111111111111111111111111111111111111112",
+        fixedOutputMint: true
+      }
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
