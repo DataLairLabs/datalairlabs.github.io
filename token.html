@@ -89,21 +89,20 @@
     </footer>
 <script>
   window.addEventListener('load', function() {
-    // Check if the Jupiter script loaded properly
     if (window.Jupiter) {
       window.Jupiter.init({
         displayMode: "integrated",
         integratedTargetId: "integrated-terminal",
-        // Valid RPC endpoint required to render the UI
-        endpoint: "https://rpc.ankr.com/solana", 
+        
+        // Private Helius RPC Endpoint
+        endpoint: "https://mainnet.helius-rpc.com/?api-key=8e2f9fe4-1521-48da-aeb8-9d4c093304ae",
+        
         formProps: {
           initialOutputMint: "4AwP3tzZjGHTmwm6q1RyrJPfKRUaWkUoLiCU4bcApump",
           initialInputMint: "So11111111111111111111111111111111111111112",
-          fixedOutputMint: true
+          fixedMint: "4AwP3tzZjGHTmwm6q1RyrJPfKRUaWkUoLiCU4bcApump"
         }
       });
-    } else {
-      console.error("Jupiter script failed to load from CDN.");
     }
   });
 </script>
