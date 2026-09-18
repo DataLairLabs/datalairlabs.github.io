@@ -52,14 +52,15 @@
                 <hr style="margin: 30px 0; border: 0; border-top: 1px solid #444;">
 
                 
-  <!-- Your existing website content, header, navigation, etc. -->
-
-  <section class="token-swap-section">
-    <h2>Swap $LAIR</h2>
-
-    <!-- ADD THIS LINE: Container where the widget loads -->
-    <div id="integrated-terminal" style="width: 100%; max-width: 420px; height: 600px; margin: 0 auto;"></div>
-  </section>
+<section class="token-swap-section" style="text-align: center; margin: 40px auto; max-width: 450px;">
+  <h2>Swap $LAIR</h2>
+  
+  <iframe
+    src="https://raydium.io/swap/?inputMint=sol&outputMint=4AwP3tzZjGHTmwm6q1RyrJPfKRUaWkUoLiCU4bcApump"
+    style="width: 100%; height: 620px; border: none; border-radius: 16px; background: #131722; box-shadow: 0 4px 20px rgba(0,0,0,0.5);"
+    title="Swap $LAIR on Raydium">
+  </iframe>
+</section>
 
   <!-- Rest of your website content... -->
 
@@ -87,19 +88,5 @@
             </div>
         </div>
     </footer>
-<script>
-  window.addEventListener('load', function() {
-    if (window.Jupiter) {
-      window.Jupiter.init({
-        displayMode: "integrated",
-        integratedTargetId: "integrated-terminal",
-        endpoint: "https://mainnet.helius-rpc.com/?api-key=8e2f9fe4-1521-48da-aeb8-9d4c093304ae",
-        formProps: {
-          initialOutputMint: "4AwP3tzZjGHTmwm6q1RyrJPfKRUaWkUoLiCU4bcApump"
-        }
-      });
-    }
-  });
-</script>
 </body>
 </html>
