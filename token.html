@@ -97,18 +97,15 @@
         // Private Helius RPC Endpoint
         endpoint: "https://mainnet.helius-rpc.com/?api-key=8e2f9fe4-1521-48da-aeb8-9d4c093304ae",
         
-        // Ensure strictTokenList is disabled so newly launched tokens load instantly
-        strictTokenList: false,
-
         formProps: {
           initialInputMint: "So11111111111111111111111111111111111111112",  // SOL
           initialOutputMint: "4AwP3tzZjGHTmwm6q1RyrJPfKRUaWkUoLiCU4bcApump", // $LAIR
-          fixedOutputMint: true // Locks output to $LAIR
+          fixedOutputMint: true,
+          strictTokenList: false
         }
       });
     }
   });
 </script>
-
 </body>
 </html>
