@@ -89,16 +89,22 @@
     </footer>
 <script>
   window.addEventListener('load', function() {
-    window.Jupiter.init({
-      displayMode: "integrated",
-      integratedTargetId: "integrated-terminal",
-      // REMOVED 'endpoint' line so Jupiter uses its default RPCs
-      formProps: {
-        initialOutputMint: "4AwP3tzZjGHTmwm6q1RyrJPfKRUaWkUoLiCU4bcApump",
-        initialInputMint: "So11111111111111111111111111111111111111112",
-        fixedOutputMint: true
-      }
-    });
+    // Check if the Jupiter script loaded properly
+    if (window.Jupiter) {
+      window.Jupiter.init({
+        displayMode: "integrated",
+        integratedTargetId: "integrated-terminal",
+        // Valid RPC endpoint required to render the UI
+        endpoint: "https://rpc.ankr.com/solana", 
+        formProps: {
+          initialOutputMint: "4AwP3tzZjGHTmwm6q1RyrJPfKRUaWkUoLiCU4bcApump",
+          initialInputMint: "So11111111111111111111111111111111111111112",
+          fixedOutputMint: true
+        }
+      });
+    } else {
+      console.error("Jupiter script failed to load from CDN.");
+    }
   });
 </script>
 
